@@ -36,7 +36,7 @@ try:
 	json.loads(payload)
 except:
 	print("the request box is not json")
-	print("ZIP File %s" %s (base64_zip_string))
+	print("ZIP File %s" %s (base64_zip_string)) # what is the issue
 
 headers = {'Forwarded':'by=webgui;for=webgui;host=webgui;proto=http','Content-Type':'application/json'}
 
