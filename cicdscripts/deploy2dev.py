@@ -32,6 +32,12 @@ payload = {"username": deploy_user,"password": deploy_password,
 		#	"password": "welcome@DVB!"
 		}
 	}}
+try:
+	json.loads(payload)
+except:
+	print("the request box is not json")
+	print("ZIP File %s" %s (base64_zip_string))
+
 headers = {'Forwarded':'by=webgui;for=webgui;host=webgui;proto=http','Content-Type':'application/json'}
 
 # call api and retrieve encoded zip content
