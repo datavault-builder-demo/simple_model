@@ -8,7 +8,7 @@ import json
 
 deploy_user = 'dvbadmin'
 deploy_password = 'ephcoomzbqAB!123' 
-deploy_baseUrl = 'http://localhost:81/cicd/'
+deploy_baseUrl = 'http://host.docker.internal:81/cicd/'
 ######################################################################## read from folder
 
 with open("../model/model_export.zip", "rb") as zip_ref:
