@@ -6,12 +6,12 @@ import shutil
 import os
 
 deploy_user = 'dvbadmin'
-deploy_password = 'eeyvdclsyaAB!123' 
+deploy_password = 'ephcoomzbqAB!123' 
 deploy_baseUrl = 'http://localhost:81/cicd/'
 ######################################################################## read from folder
 
-with zipfile.ZipFile('../model/model_export.zip', 'r') as zip_ref:
-    zip_ref.extractall('model_export')
+with open("../model/model_export.zip", "rb") as zip_ref:
+    base64_zip_string = base64.b64encode(zip_ref.read())
 
 
 ######################################################################deploy    
