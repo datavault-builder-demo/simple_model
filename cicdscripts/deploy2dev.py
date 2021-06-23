@@ -4,6 +4,7 @@ import zipfile
 import os
 import shutil
 import os
+import json
 
 deploy_user = 'dvbadmin'
 deploy_password = 'ephcoomzbqAB!123' 
@@ -11,7 +12,7 @@ deploy_baseUrl = 'http://localhost:81/cicd/'
 ######################################################################## read from folder
 
 with open("../model/model_export.zip", "rb") as zip_ref:
-    base64_zip_string = base64.b64encode(zip_ref.read())
+    base64_zip_string = base64.b64encode(zip_ref.read()).decode('UTF8')
 
 
 ######################################################################deploy    
@@ -33,10 +34,10 @@ payload = {"username": deploy_user,"password": deploy_password,
 		}
 	}}
 try:
-	json.loads(payload)
+	json.dumps(payload)
 except:
 	print("the request box is not json")
-	print("ZIP File %s" %s (base64_zip_string)) # what is the issue
+	print("ZIP File %s" % (base64_zip_string)) # what is the issue
 
 headers = {'Forwarded':'by=webgui;for=webgui;host=webgui;proto=http','Content-Type':'application/json'}
 
