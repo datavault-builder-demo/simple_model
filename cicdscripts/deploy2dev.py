@@ -30,7 +30,7 @@ payload = {"username": deploy_user,"password": deploy_password,
 		"environment_parameters": {
 		#	"url": "http://host.docker.internal",
 		#	"username": "dev",
-		#	"password": "welcome@DVB!"
+		#	"password": "welcome@DVB!" 
 		}
 	}}
 try:
