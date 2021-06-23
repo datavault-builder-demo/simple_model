@@ -37,7 +37,7 @@ headers = {'Forwarded':'by=webgui;for=webgui;host=webgui;proto=http','Content-Ty
 # call api and retrieve encoded zip content
 res = requests.post(deploy_baseUrl + 'deployModel', json=payload, headers=headers)
 try:
-	jsonBody = res.json()
+  jsonBody = res.json()
   print(jsonBody)
 else:
   print(res.content)
