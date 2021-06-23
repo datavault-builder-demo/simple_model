@@ -39,5 +39,5 @@ res = requests.post(deploy_baseUrl + 'deployModel', json=payload, headers=header
 try:
   jsonBody = res.json()
   print(jsonBody)
-else:
+except:
   print(res.content)
